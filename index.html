@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SolGuard — Solana Safety Scanner</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">◈</span>
+    <div>
+      <h1>SolGuard</h1>
+      <p class="tagline">Know before you sign. Token & transaction safety scanner for Solana.</p>
+    </div>
+  </div>
+  <div class="net-badge" id="netBadge">mainnet</div>
+</header>
+
+<main>
+  <section class="hero">
+    <p>Drainers don't need your seed phrase — one malicious signature is enough.
+    Paste a token, a transaction, or a wallet below to see the risks <em>before</em> you act.</p>
+  </section>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="token">Token risk</button>
+    <button class="tab" data-tab="tx">Transaction</button>
+    <button class="tab" data-tab="wallet">Wallet</button>
+  </nav>
+
+  <section class="panel active" id="panel-token">
+    <div class="input-row">
+      <input id="tokenInput" type="text" placeholder="Token mint address, e.g. EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v" spellcheck="false">
+      <button id="tokenBtn" class="primary">Scan token</button>
+    </div>
+    <div class="examples">
+      <span>Try:</span>
+      <button class="chip" data-token="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v">USDC</button>
+      <button class="chip" data-token="So11111111111111111111111111111111111111112">wSOL</button>
+      <button class="chip" data-token="DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263">BONK</button>
+    </div>
+    <div id="tokenResult" class="result"></div>
+  </section>
+
+  <section class="panel" id="panel-tx">
+    <div class="input-row">
+      <input id="txInput" type="text" placeholder="Transaction signature (base58)" spellcheck="false">
+      <button id="txBtn" class="primary">Analyze</button>
+    </div>
+    <div id="txResult" class="result"></div>
+  </section>
+
+  <section class="panel" id="panel-wallet">
+    <div class="input-row">
+      <input id="walletInput" type="text" placeholder="Wallet address (base58)" spellcheck="false">
+      <button id="walletBtn" class="primary">Check wallet</button>
+    </div>
+    <div id="walletResult" class="result"></div>
+  </section>
+
+  <section class="disclaimer">
+    <strong>Research tool.</strong> No wallet connection, no signatures, read-only on-chain data.
+    Not financial advice.
+  </section>
+</main>
+
+<footer>
+  <span>SolGuard — built for the Superteam Road to Colosseum hackathon</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
