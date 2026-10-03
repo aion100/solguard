@@ -5,6 +5,10 @@ token, transaction or wallet on Solana — before you approve anything.
 
 Built for the **Superteam "Road to Colosseum" hackathon**.
 
+- **Live demo:** https://solguard-aion-100pln.surge.sh
+- **Demo video:** https://solguard-aion-100pln.surge.sh/demo.webm
+- **Network:** Solana **mainnet-beta** (read-only RPC)
+
 ## The problem
 Drainers don't need your seed phrase. One malicious signature — a token
 approval, an authority change — can empty a wallet. Most people sign without
